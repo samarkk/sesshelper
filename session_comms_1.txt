@@ -17,4 +17,9 @@ to log in to the machine
 do
 ssh vagrant@master
 password is  vagrant
+open gitbash
+cd /c
+pwd
+verify in directory /c
+git clone https://github.com/samarkk/kafka-examples
 
