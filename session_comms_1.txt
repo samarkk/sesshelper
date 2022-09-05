@@ -2,3 +2,14 @@
 checking
 this is my ghithb trick to address this environment
 https://github.com/samarkk/kafka-examples/blob/main/src/main/scripts/hdfs-start.txt
+go to virtual box and shut off the machine
+and then opnen up command prompt - pinned to the taskbar
+issue
+cd \kafkamulti
+vagrant up master
+open up two more command prompt windows
+and in one issue
+vagrant up node1
+and in the third one 
+vagrant up node2
+
