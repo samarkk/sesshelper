@@ -7,6 +7,7 @@ and then opnen up command prompt - pinned to the taskbar
 issue
 cd \kafkamulti
 vagrant up master
+ping master
 open up two more command prompt windows
 and in one issue
 vagrant up node1
