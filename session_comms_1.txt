@@ -1,3 +1,4 @@
 #  follow the stuff here
 checking
 this is my ghithb trick to address this environment
+https://github.com/samarkk/kafka-examples/blob/main/src/main/scripts/hdfs-start.txt
