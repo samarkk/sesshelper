@@ -23,3 +23,5 @@ pwd
 verify in directory /c
 git clone https://github.com/samarkk/kafka-examples
 
+kafka-consumer-groups --bootstrap-server master:9092 --list
+kafka-consumer-groups --bootstrap-server master:9092 --describe --group firstgroup
