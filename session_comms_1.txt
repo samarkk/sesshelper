@@ -27,10 +27,12 @@ kafka-consumer-groups --bootstrap-server master:9092 --list
 kafka-consumer-groups --bootstrap-server master:9092 --describe --group firstgroup
 
 cp /home/vagrant/.bashrc /home/vagrant/.bashrcbkup
+free -h
 /home/vagrant/kafka/bin/kafka-server-stop.sh
 /home/vagrant/kafka/bin/zookeeper-server-stop.sh
 echo 'export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"' >> /home/vagrant/.bashrc
 /home/vagrant/kafka/bin/zookeeper-server-start.sh -daemon /home/vagrant/kafka/config/zookeeper.properties
+source /home/vagrant/.bashrc
 jps
 tlpg 2181
 /home/vagrant/kafka/bin/kafka-server-start.sh -daemon /homevagrant/kafka/bin/server.properties
