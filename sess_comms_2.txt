@@ -1,3 +1,6 @@
 /home/vagrant/confluent/bin/schema-registry-start -daemon /home/vagrant/confluent/etc/schema-registry/schema-registry.properties
 kafka-consumer-groups --bootstrap-server master:9092 --list
 kafka-consumer-groups --bootstrap-server master:9092 --describe --group idegr
+kafka-topics --bootstrap-server master:9092 --delete --topic ide_topic
+# now run producerdemo from the producer package
+# after that run the consumerdemo from consumer package
