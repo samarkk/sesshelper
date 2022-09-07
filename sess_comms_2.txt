@@ -15,5 +15,10 @@ ln -s apache-cassandra-3.11.11/ cassandra
 cp /vagrant/cassconfigs/cassandra.yaml  /home/vagrant/cassandra/conf
 which cassandra
 cassandra
+cqlsh master 9042
+use finks;
+select count(*) from finks.fotable;
+truncate table finks.fotable;
+select * from finks.fotable limit 5;
 
  
