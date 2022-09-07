@@ -1,0 +1,1 @@
+/home/vagrant/confluent/bin/schema-registry-start -daemon /home/vagrant/confluent/etc/schema-registry/schema-registry.properties
