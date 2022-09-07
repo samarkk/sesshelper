@@ -8,4 +8,4 @@ kafka-consumer-groups  --bootstrap-server master:9092 --group idegr --topic ide_
 kafka-consumer-groups  --bootstrap-server master:9092 --group idegr --topic ide_topic --reset-offsets --to-earliest --execute
 kafka-topics --bootstrap-server master:9092 --delete --topic fotopic
 # run ProducerFileClient.java
-
+master:9092 hdfsgr fotopic hdfs://master:8020/tmp/nsefo.txt hdfs://master:8020
