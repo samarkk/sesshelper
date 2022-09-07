@@ -9,3 +9,11 @@ kafka-consumer-groups  --bootstrap-server master:9092 --group idegr --topic ide_
 kafka-topics --bootstrap-server master:9092 --delete --topic fotopic
 # run ProducerFileClient.java
 master:9092 hdfsgr fotopic hdfs://master:8020/tmp/nsefo.txt hdfs://master:8020
+cd
+rm -r -f cassandra
+ln -s apache-cassandra-3.11.11/ cassandra
+cp /vagrant/cassconfigs/cassandra.yaml  /home/vagrant/cassandra/conf
+which cassandra
+cassandra
+
+ 
