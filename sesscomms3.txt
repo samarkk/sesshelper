@@ -3,4 +3,6 @@
  touch /home/vagrant/demosa.txt
  /home/vagrant/kafka/bin/connect-standalone.sh  /home/vagrant/kafka/config/connect-standalone.properties  /vagrant/file_connector_standalone.properties
  cat > /home/vagrant/demosa.txt
+ kafka-console-consumer --bootstrap-server master:9092 --topic file-connect-standalone
+ 
  
