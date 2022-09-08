@@ -24,3 +24,9 @@ echo '{"name":"fsc1","config":{"connector.class":"org.apache.kafka.connect.file.
  # in tmux in another pane
  tail -f /home/vagrant/distnewcopy.txt
  
+cd /usr/share/java
+sudo unzip /home/vagrant/c/Users/Administrator/Downloads/confluentinc-kafka-connect-hdfs3-1.1.20.zip  -d .
+sudo unzip /home/vagrant/c/Users/Administrator/Downloads/confluentinc-kafka-connect-jdbc-10.5.2.zip  -d .
+sudo cp mysql-connector-java.jar confluentinc-kafka-connect-jdbc-10.5.2/lib
+
+ 
