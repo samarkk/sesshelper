@@ -20,3 +20,7 @@ touch /home/vagrant/distnewcopy.txt
 echo '{"name":"fsc1","config":{"connector.class":"org.apache.kafka.connect.file.FileStreamSinkConnector", 
 "file":"/home/vagrant/distnewcopy.txt", "topics":"file-new-topic"}}' \
  | curl -X POST -d @- http://master.e4rlearning.com:8083/connectors --header "content-Type:application/json"
+ 
+ # in tmux in another pane
+ tail -f /home/vagrant/distnewcopy.txt
+ 
