@@ -1,0 +1,18 @@
+# create the topic that will hook into the file stream source
+ kafka-topics --bootstrap-server master.e4rlearning.com:9092 --create --topic file-new-topic --partitions 3 --replication-factor 1
+# create the file
+touch /home/vagrant/distnew.txt
+
+# create the rest configuration and curl it to connectors
+
+echo '{"name":"fsdc1","config":{"connector.class":"org.apache.kafka.connect.file.FileStreamSourceConnector","file":"/home/vagrant/distnew.txt", "topic":"file-new-topic"}}'\
+ | curl -X POST -d @- http://master.e4rlearning.com:8083/connectors --header "content-Type:application/json"
+
+# verify that the connector is created
+curl master.e4rlearning.com:8083/connectors
+
+tmux
+in two panes
+
+kafka-console-consumer --bootstrap-server master:9092 --topic file-new-topic
+cat > /home/vagrant/distnew.txt
