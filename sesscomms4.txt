@@ -47,4 +47,4 @@ master:9092 http://master:8081 nsefo-topic-avro C:/test/fo01JAN2020bhav.csv
 kafka-topics --bootstrap-server master:9092 --create --topic wci  --partitions 3 --replication-factor 1 
 kafka-topics --bootstrap-server master:9092 --create --topic wco --partitions 3 --replication-factor 1
 kafka-console-producer --bootstrap-server master:9092 --topic wci
-kafka-console-consumer --bootstrap-server master:9092 --topic wco --property print.key=true --value-deserializer orga.apache.kafka.common.seraialization.LongDeserializer --from-beginning
+kafka-console-consumer --bootstrap-server master:9092 --topic wco --property print.key=true --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --from-beginning
