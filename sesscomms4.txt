@@ -16,3 +16,7 @@ in two panes
 
 kafka-console-consumer --bootstrap-server master:9092 --topic file-new-topic
 cat > /home/vagrant/distnew.txt
+touch /home/vagrant/distnewcopy.txt
+echo '{"name":"fsc1","config":{"connector.class":"org.apache.kafka.connect.file.FileStreamSinkConnector", 
+"file":"/home/vagrant/distnewcopy.txt", "topics":"file-new-topic"}}' \
+ | curl -X POST -d @- http://master.e4rlearning.com:8083/connectors --header "content-Type:application/json"
