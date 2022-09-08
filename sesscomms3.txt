@@ -27,3 +27,9 @@ tlpg 8083
 sudo yum install -y jq
 curl localhost:8083/connector-plugins | jq
 curl  master:8083/connectors | jq
+
+in a separate terminal ssh
+tmux
+kafka-console-consumer --bootstrap-server master:9092 --topic file-dist-topic
+# in another pane
+cat > /home/vagrant/distdemo.txt
