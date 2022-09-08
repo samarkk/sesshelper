@@ -42,3 +42,4 @@ curl master:8083/connectors/<cn> | jq
 # to see status for a connector
 curl master:8083/connecgtors/<cn>/status  | jq
 
+master:9092 http://master:8081 nsefo-topic-avro C:/test/fo01JAN2020bhav.csv
