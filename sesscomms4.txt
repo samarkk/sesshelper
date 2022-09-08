@@ -30,3 +30,12 @@ sudo unzip /home/vagrant/c/Users/Administrator/Downloads/confluentinc-kafka-conn
 sudo cp mysql-connector-java.jar confluentinc-kafka-connect-jdbc-10.5.2/lib
 
  
+# to see installed connector plugins
+curl master:8083/connector-plugins | jq
+# to see our connectors
+curl master:8083/connectors | jq
+# to see details for a connector - replace <cn> with connector name
+curl master:8083/connectors/<cn> | jq
+# to see status for a connector
+curl master:8083/connecgtors/<cn>/status  | jq
+
