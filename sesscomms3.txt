@@ -1,1 +1,2 @@
  cp /home/vagrant/c/kafka-examples/src/main/scripts/connect/* /vagrant
+ /home/vagrant/kafka/bin/connect-standalone.sh  /home/vagrant/kafka/config/connect-standalone.properties  /vagrant/file_connector_standalone.properties
