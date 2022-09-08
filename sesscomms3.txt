@@ -1,0 +1,1 @@
+ cp /home/vagrant/c/kafka-examples/src/main/scripts/connect/* /vagrant
