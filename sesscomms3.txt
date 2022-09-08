@@ -19,4 +19,11 @@ cp /vagrant/connect-distributed.properties  connect-distributed.properties
 cat connect-distributed.properties
 # verify the plugins.path line
 
-
+# start connect-distributed
+/home/vagrant/kafka/bin/connect-distributed.sh -daemon /home/vagrant/kafka/config/connect-distributed.properties
+jps
+# we should see connectdistributed
+tlpg 8083
+sudo yum install -y jq
+curl localhost:8083/connector-plugins | jq
+curl  master:8083/connectors | jq
