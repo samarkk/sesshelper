@@ -5,4 +5,15 @@
  cat > /home/vagrant/demosa.txt
  kafka-console-consumer --bootstrap-server master:9092 --topic file-connect-standalone
  
- 
+ hvkc
+ cp connect-distributed.properties /vagrant
+ # change line 89 to
+plugin.path=/usr/share/java
+# save the file
+pwd
+verify you are in /home/vagrant/kafka/config
+cp /vagrant/connect-distributed.properties  connect-distributed.properties
+cat connect-distributed.properties
+# verify the plugins.path line
+
+
