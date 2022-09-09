@@ -48,3 +48,9 @@ kafka-topics --bootstrap-server master:9092 --create --topic wci  --partitions 3
 kafka-topics --bootstrap-server master:9092 --create --topic wco --partitions 3 --replication-factor 1
 kafka-console-producer --bootstrap-server master:9092 --topic wci
 kafka-console-consumer --bootstrap-server master:9092 --topic wco --property print.key=true --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --from-beginning
+
+kafka-console-producer --bootstrap-server master:9092 --property parse.key=true --property key.separator=, --topic impressions
+kafka-console-producer --bootstrap-server master:9092 --property parse.key=true --property key.separator=, --topic clicks
+kafka-console-consumer --bootstrap-server master:9092 --topic impressionsandclicks --property print.key=true --from-beginning
+
+
