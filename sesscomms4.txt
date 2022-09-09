@@ -53,4 +53,6 @@ kafka-console-producer --bootstrap-server master:9092 --property parse.key=true 
 kafka-console-producer --bootstrap-server master:9092 --property parse.key=true --property key.separator=, --topic clicks
 kafka-console-consumer --bootstrap-server master:9092 --topic impressionsandclicks --property print.key=true --from-beginning
 
-
+kafka-console-consumer --bootstrap-server master:9092 --topic user-regions --property print.key=true --from-beginning
+kafka-console-consumer --bootstrap-server master:9092 --topic user-clicks --property print.key=true --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --from-beginning
+kafka-console-consumer --bootstrap-server master:9092 --topic user-clicks-regions --property print.key=true --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --from-beginning
