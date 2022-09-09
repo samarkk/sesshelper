@@ -63,3 +63,9 @@ sudo systemctl enable --now  rabbitmq-server.service
 # username - guest, password - guest
 tlpg 15672
 # go to master:15672
+
+sudo yum install -y java-11-openjdk-devel.x86_64
+sudo  update-alternatives  --config java
+sudo  update-alternatives  --config javac
+sudo  update-alternatives  --config java_sdk_openjdk
+
