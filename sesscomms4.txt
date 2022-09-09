@@ -56,3 +56,10 @@ kafka-console-consumer --bootstrap-server master:9092 --topic impressionsandclic
 kafka-console-consumer --bootstrap-server master:9092 --topic user-regions --property print.key=true --from-beginning
 kafka-console-consumer --bootstrap-server master:9092 --topic user-clicks --property print.key=true --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --from-beginning
 kafka-console-consumer --bootstrap-server master:9092 --topic user-clicks-regions --property print.key=true --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --from-beginning
+
+sudo yum install rabbitmq-server.noarch
+sudo rabbitmq-plugins enable rabbitmq_management
+sudo systemctl enable --now  rabbitmq-server.service
+# username - guest, password - guest
+tlpg 15672
+# go to master:15672
